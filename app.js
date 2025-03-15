@@ -24,6 +24,7 @@ function actualizarListaAmigos() {
   });
 }
 
+//Principal
 function sortearAmigo() {
   if (amigos.length === 0) {
     alert("No hay amigos en la lista para sortear.");
