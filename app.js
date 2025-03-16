@@ -9,7 +9,17 @@ function agregarAmigo() {
     alert("Por favor, inserte un nombre.");
     return;
   }
+  
+  // Valida si el nombre ya existe en el arreglo (sin distinguir entre mayúsculas/minúsculas)
+  const nombreExiste = amigos.some(
+    (amigo) => amigo.toLowerCase() === nombreAmigo.toLowerCase()
+  );
 
+  if (nombreExiste) {
+    alert(`El nombre "${nombreAmigo}" ya está en la lista.`);
+    return;
+  }
+  
   // Agrega el nombre al arreglo amigos
   amigos.push(nombreAmigo);
   actualizarListaAmigos();
