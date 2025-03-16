@@ -27,6 +27,19 @@ function actualizarListaAmigos() {
     lista.appendChild(li);
   });
 }
+function resetSorteo() {
+  // Vacía el arreglo de amigos
+  amigos = [];
+
+  // Limpia las listas en el DOM
+  document.getElementById("listaAmigos").innerHTML = "";
+  document.getElementById("resultado").innerHTML = "";
+
+  // Limpia el campo de entrada por si quedó algún valor
+  document.getElementById("amigo").value = "";
+
+  alert("¡Sorteo reiniciado!");
+}
 
 //Funcion Principal
 function sortearAmigo() {
